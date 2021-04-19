@@ -40,7 +40,7 @@ for j in range(0,N):
         else: z=z+1
     pole.append((p/(p+z))*(x2-x1)*(y2-y1))
 
-#print(pole)
+print(pole)
 
 #podpunkt c
 plt.hist(pole,bins=20)
