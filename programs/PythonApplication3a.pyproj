@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9166d734-d240-41a1-bd6a-ae183d15258c</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>praca domowa.py</StartupFile>
+    <StartupFile>zad4.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -12,7 +12,7 @@
     <Name>PythonApplication3a</Name>
     <RootNamespace>PythonApplication3a</RootNamespace>
     <InterpreterId>Global|PythonCore|3.7</InterpreterId>
-    <IsWindowsApplication>False</IsWindowsApplication>
+    <IsWindowsApplication>True</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
