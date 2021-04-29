@@ -10,13 +10,27 @@ def zmiana(p):
     else:
         return 0
 
-LP=[1]
+
 def populacja(p):
-    for j in range(0,10):
-        lpt=LP[len(LP-1)]
-        for i in range(0, lpt):
+    LP=[1]
+    lpt=0
+    while lpt<1000:
+        lpt=LP[len(LP)-1]
+        lp0=lpt
+        for i in range(0, lp0):
             lpt=lpt+zmiana(p)
         LP.append(lpt)
-    print(LP)
+    return LP
 
-populacja(0.5)
+Sl=[]
+P=[]
+for j in range(0,10):
+    pu=(j+1)/10
+    P.append(pu)
+    L=[]
+    for i in range(0,100):
+        L.append(len(populacja(pu)))
+    Sl.append(np.mean(L))
+
+plt.plot(P,Sl,'bx')
+plt.show()
