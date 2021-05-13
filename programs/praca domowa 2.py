@@ -27,7 +27,7 @@ def spacer(W0, N, p, q):
 #plt.show()
 
 
-n=1000
+n=2000
 Wn=np.zeros([n,1])
 for i in range(1,n):
     a=spacer(25,1000,0.35,0.25)
@@ -37,8 +37,15 @@ for i in range(1,n):
 plt.subplot(2,1,1)
 plt.title('N=1000')
 plt.hist(Wn,20)
-
 plt.show()
+
+
+pvalue=stats.normaltest(Wn)[1]
+if (pvalue>0.05): print('rozkład normalny. pvalue: ', pvalue)
+else: print('NIE rozkład normalny. pvalue: ', pvalue)
+
+normalny=stats.norm(np.mean(Wn),np.std(Wn))
+print(stats.kstest(Wn,normalny.cdf))
 
 print(sum(Wn)/n)
 print(25+1000*(0.35-0.25))
